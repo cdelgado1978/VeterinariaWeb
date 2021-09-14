@@ -6,7 +6,7 @@ Html, CSS, JS
 PHP
 SQL
 
-#Participantes
+# Participantes
 Enmanuel Garcia
 Elisaul Guzman
 Cesar Delgado
