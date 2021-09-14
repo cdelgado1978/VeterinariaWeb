@@ -7,6 +7,6 @@ PHP
 SQL
 
 # Participantes
-Enmanuel Garcia
-Elisaul Guzman
-Cesar Delgado
+1. Enmanuel Garcia 
+2. Elisaul Guzman
+3. Cesar Delgado
