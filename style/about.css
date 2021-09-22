@@ -1,0 +1,51 @@
+:root {
+    --DarkBrown: #371809;
+    --MediumBrown: #683217;
+    --LightBrown: #895330;
+    --LightesBrown: #a68575;
+}
+
+html,
+body {
+    height: 100%;
+    width: 1024px;
+    margin: auto;
+    background-color: var(--LightesBrown);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    justify-items: stretch;
+}
+
+.OurDesc {
+    height: 150px;
+    margin: auto;
+    padding: 10px;
+    color:white;
+    text-align: center;
+}
+
+.header {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width: auto;
+    height: 200px;
+    background-color: var(--MediumBrown);
+    margin: auto;
+    color: white;
+}
+
+.perfiles {
+    height: 500px;
+    width: 250px;
+    background-color: var(--MediumBrown);
+    margin: 10px;
+    border: 5px solid var(--LightBrown);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
