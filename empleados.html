@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Empleados</h1>
+    <hr>
+
+    <?php
+
+        require('connection.php');
+        $id = $_GET['id'];
+
+        if ($id > 1) {
+            $empleados = null;
+            $statementEmpleados = $conexion->prepare('select * from empleados where id=:id');
+            $statementEmpleados->execute(
+                array(':id' => $id)
+            );
+
+            $empleados = $statementEmpleados->fetchAll();
+
+        } else {
+            
+            $empleados = null;
+            $statementEmpleados = $conexion->prepare('select * from empleados');
+            $statementEmpleados-> execute();
+
+            $empleados = $statementEmpleados-> fetchAll();
+
+        }
+
+        echo "<table>
+                <thead>
+                    <th>Id</th>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Fecha Nacimiento</th>
+                </thead>
+                <tbody>";
+                        
+        foreach ($empleados as $empleado) {
+            echo "<tr>";
+            echo "<td>".$empleado['id']."</td>";
+            echo "<td>".$empleado['code']."</td>";
+            echo "<td>".$empleado['nombre']."</td>";
+            echo "<td>".$empleado['apellidos']."</td>";
+            echo "<td>".$empleado['fechaNacimiento']."</td>
+                 </tr>";
+        };
+
+        echo "</tbody>
+        
+        </table>";
+
+    ?>
+</body>
+</html>
