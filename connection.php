@@ -7,6 +7,8 @@
     $connInfo = array("Database" => "Veterinaria");
     $conn = sqlsrv_connect( $serverName, $connInfo);
 
+    $root = '/Fuentes/UAPA/Programacion Web/VeterinariaWeb';
+    
     if( !$conn ) {
         
         echo "Conexión no se pudo establecer.<br />";

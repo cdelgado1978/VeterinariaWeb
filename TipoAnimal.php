@@ -1,7 +1,7 @@
 <?php
 require('connection.php');
-$qryProvincias = "select * from provincia";
-$executeQry = sqlsrv_query($conn, $qryProvincias);
+$qryTipoAnimal = "select * from tipo_animal";
+$executeQry = sqlsrv_query($conn, $qryTipoAnimal);
 
 ?>
 
@@ -12,7 +12,7 @@ $executeQry = sqlsrv_query($conn, $qryProvincias);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Provincias</title>
+    <title>Tipo Animal</title>
     <link href="/style/bootstrap.min.css" rel="stylesheet" />
     <link href="/style/main.css" rel="stylesheet" />
 
@@ -26,11 +26,12 @@ $executeQry = sqlsrv_query($conn, $qryProvincias);
 
         <div class="row col-md-6 mb-4">
 
-            <button type='submit' class='btn btn-primary'>Agregar Provincia</button>
+            <button type='submit' class='btn btn-primary'>Agregar Tipo Animal</button>
+
             <!-- <form method="POST" action="provinciaUpdate.php">
                 <?php
                 echo  "<div class='form-group'>
-                            <label>Nombre de Provincia</label>
+                            <label>Tipo de Animal</label>
                             <input class='form-control' id='Nombre' name='Nombre' placeholder='Nombre'>
                         </div>
                         <button type='submit' class='btn btn-primary'>Guardar</button>"
@@ -49,12 +50,11 @@ $executeQry = sqlsrv_query($conn, $qryProvincias);
             </thead>
             <tbody>";
 
-            // foreach ($provincias as $provincia) {
-            while ($provincia = sqlsrv_fetch_array($executeQry)) {
-                $id = $provincia['Id'];
+            while ($tipoAnimal = sqlsrv_fetch_array($executeQry)) {
+                $id = $tipoAnimal['Id'];
                 echo "<tr>";
-                echo "<td>" . $provincia['Id'] . "</td>";
-                echo "<td>" . $provincia['Nombre'] . "</td>";
+                echo "<td>" . $tipoAnimal['Id'] . "</td>";
+                echo "<td>" . $tipoAnimal['Nombre'] . "</td>";
                 echo "<td><a href='provinciaEditar.php?Id=$id'>Editar</a></td>
             </tr>";
             };

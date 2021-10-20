@@ -1,0 +1,19 @@
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+.menu li {
+    display: inline;
+  }
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa!important;
+    color: grey;
+    text-align: center;
+ }
