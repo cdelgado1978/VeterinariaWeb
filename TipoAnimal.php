@@ -28,7 +28,7 @@ $executeQry = sqlsrv_query($conn, $qryTipoAnimal);
 
             <button type='submit' class='btn btn-primary'>Agregar Tipo Animal</button>
 
-            <!-- <form method="POST" action="provinciaUpdate.php">
+            <!-- <form method="POST" action="TipoAnimalUpdate.php">
                 <?php
                 echo  "<div class='form-group'>
                             <label>Tipo de Animal</label>
@@ -55,7 +55,7 @@ $executeQry = sqlsrv_query($conn, $qryTipoAnimal);
                 echo "<tr>";
                 echo "<td>" . $tipoAnimal['Id'] . "</td>";
                 echo "<td>" . $tipoAnimal['Nombre'] . "</td>";
-                echo "<td><a href='provinciaEditar.php?Id=$id'>Editar</a></td>
+                echo "<td><a href='TipoAnimalEditar.php?Id=$id'>Editar</a></td>
             </tr>";
             };
 

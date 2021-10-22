@@ -3,7 +3,7 @@
     // echo $_SERVER['PHP_SELF'];
     // $dir = dirname(__FILE__);
 
-    $root = '/Fuentes/UAPA/Programacion Web/VeterinariaWeb';
+    $root = '/Users/uuser/Documents/GitHub/VeterinariaWeb';
 
 ?>
 

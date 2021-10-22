@@ -3,11 +3,12 @@
     // $db = new PDO('mysql:host=localhost;dbname=desarrolloweb', 'root', '');
     // echo "Conexion Ok";
 
-    $serverName = ".\SqlServer2k17";
+    $serverName = "ENMANUEL-PC";
     $connInfo = array("Database" => "Veterinaria");
     $conn = sqlsrv_connect( $serverName, $connInfo);
 
-    $root = '/Fuentes/UAPA/Programacion Web/VeterinariaWeb';
+
+    $root = '/Users/uuser/Documents/GitHub/VeterinariaWeb';
     
     if( !$conn ) {
         

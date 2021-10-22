@@ -1,0 +1,46 @@
+<?php
+require('connection.php');
+
+if (isset($_GET['Id'])) {
+  $id = $_GET['Id'];
+}
+
+$qry = "select * from Tipos_Animal where Id = '$id'";
+
+$executeQry = sqlsrv_query($conn, $qry);
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tipos_Animal</title>
+
+  <link href="style/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="col-md-4">
+    <form method="POST" action="TipoAnimalUpdate.php">
+      <?php
+
+      $registro = sqlsrv_fetch_array($executeQry);
+
+      echo  "<div class='form-group'>
+        <label>Nombre del tipos del animal</label>
+        <input class='form-control' id='Nombre' name='Nombre' placeholder='Nombre' value='".$registro['Nombre']."'>
+      </div>
+      <button type='submit' class='btn btn-primary'>Guardar</button>"
+      ?>
+    </form>
+  </div>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
