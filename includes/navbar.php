@@ -10,7 +10,7 @@
         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Animales</a>
+        <a class="nav-link" href="Animal.php">Animales</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -24,7 +24,7 @@
           <a class="dropdown-item" href="raza.php">Razas</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="tipoproducto.php">Tipo Producto</a>
-          <a class="dropdown-item" href="producto.php">Producto</a>
+          <a class="dropdown-item" href="producto.php" disabled>Producto</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="proveedor.php">Proveedor</a>
           
