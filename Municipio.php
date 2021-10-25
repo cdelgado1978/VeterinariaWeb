@@ -52,7 +52,7 @@ if (isset($_GET['Id'])) {
             echo "    <label>Provincia</label>";
             echo "    <select class='form-control' id='provincia' name='ProvinciaId'>";
                         while ($provincia = sqlsrv_fetch_array($executeQryProv)) {
-            echo "                    <option value='$provincia[provinciaId]'>$provincia[Nombre]</option>";
+            echo "                    <option value='$provincia[Id]'>$provincia[Nombre]</option>";
                         }
             echo "    </select>";
             echo "</div>";
@@ -73,7 +73,7 @@ if (isset($_GET['Id'])) {
                 echo "                <label>Provincia</label>";
                 echo "                <select class='form-control' id='provincia' name='ProvinciaId'>";
                                     while ($provincia = sqlsrv_fetch_array($executeQryProv)) {
-                echo "                        <option value='$provincia[provinciaId]'>$provincia[Nombre]</option>";
+                echo "                        <option value='$provincia[Id]'>$provincia[Nombre]</option>";
                                     }
                 echo "        </select>";
                 echo "        </div>";
