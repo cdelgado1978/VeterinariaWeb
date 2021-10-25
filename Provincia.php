@@ -2,6 +2,14 @@
 require('connection.php');
 $qryProvincias = "select * from provincia";
 $executeQry = sqlsrv_query($conn, $qryProvincias);
+$id = 0;
+if (isset($_GET['Id'])) {
+  $id = $_GET['Id'];
+  $qryProvincia = "select * from provincia where id=$id";
+  $executeQryProv = sqlsrv_query($conn, $qryProvincia);
+  $provincia = sqlsrv_fetch_array($executeQryProv);
+//  die(print_r($provincia));
+}
 
 ?>
 
@@ -26,21 +34,37 @@ $executeQry = sqlsrv_query($conn, $qryProvincias);
     <h2>Provincia</h2>
     <hr>
     <div class="row">
-      <div class="row col-md-4 mb-4">
-        <form action="provinciaNuevo.php" method="post">
+      <div class="col-md-6 mb-4">
+        <?php
+        if($id>=1){
+          echo "<form action='provinciaUpdate.php' method='post'>";
+          echo " <input type='hidden' name='Id' value='$provincia[Id]'/>";
+          echo "  <div class='form-group'>";
+          echo "     <label>Nombre</label>";
+          echo "     <input type='text' name='Nombre' class='form-control' value='$provincia[Nombre]'  placeholder='Nombre de Provincia'>";
+          echo "  </div>";
+          echo "  <hr />";
+          echo "  <div class='form-group'>";
+          echo "     <button type='submit' class='btn btn-primary'>Guardar</button>";
+          echo "     <a href='/Provincia.php' class='btn btn-danger'>Cancelar</a>";
+          echo "  </div>";
+          echo "</form>";
+          
+        } else {
+echo "<form action='provinciaNuevo.php' method='post'>";
+echo "  <div class='form-group'>";
+echo "     <label>Nombre</label>";
+echo "     <input type='text' name='name' class='form-control' placeholder='Nombre de Provincia'>";
+echo "  </div>";
+echo "  <hr />";
+echo "  <div class='form-group'>";
+echo "     <button type='submit' class='btn btn-primary'>Guardar</button>";
+echo "  </div>";
+echo "</form>";
 
-          <div class="form-group">
-            <label for="exampleInputPassword1">Nombre</label>
-            <input type="text" name="name" class="form-control" placeholder="Nombre de Provincia">
-          </div>
-          <hr />
-          <div class="form-group">
-
-            <button type="submit" class="btn btn-primary">Save changes</button>
-          </div>
-        </form>
-
-
+        }
+        
+?>
       </div>
 
     </div>
@@ -61,7 +85,7 @@ $executeQry = sqlsrv_query($conn, $qryProvincias);
               echo "<tr>";
               echo "<td>" . $provincia['Id'] . "</td>";
               echo "<td>" . $provincia['Nombre'] . "</td>";
-              echo "<td><a href='provinciaEditar.php?Id=$id'>Editar</a></td>
+              echo "<td><a href='provincia.php?Id=$id'>Editar</a></td>
             </tr>";
             };
 
