@@ -1,11 +1,11 @@
 <?php 
     // echo $_SERVER['SERVER_NAME'];
     // echo $_SERVER['PHP_SELF'];
-     $dir = dirname(__FILE__);
+    //  $dir = dirname(__FILE__);
 
     // $root = '/Users/uuser/Documents/GitHub/VeterinariaWeb';
-    // $root = '/Fuentes/UAPA/Programacion Web/VeterinariaWeb';
-    $root = '/laragon/www/VeterinariaWeb';
+    $root = '/Fuentes/UAPA/Programacion Web/VeterinariaWeb';
+    // $root = '/laragon/www/VeterinariaWeb';
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +19,6 @@
     <link href="style/main.css" rel="stylesheet" />
 </head>
 <body>
-
     <nav>
         <?php include $root.'/includes/navbar.php'; ?>
     </nav>
