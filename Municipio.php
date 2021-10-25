@@ -8,8 +8,8 @@ $qryProv = "select * from provincia";
 $executeQryProv = sqlsrv_query($conn, $qryProv);
 
 $id = 0;
-if (isset($_GET['id'])) {
-  $id = $_GET['id'];
+if (isset($_GET['Id'])) {
+  $id = $_GET['Id'];
   $qryMunicipio = "select * from municipio where id=$id";
   $executeQryMun = sqlsrv_query($conn, $qryMunicipio);
   $municipo = sqlsrv_fetch_array($executeQryMun);
