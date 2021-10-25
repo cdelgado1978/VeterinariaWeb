@@ -22,6 +22,9 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="TipoAnimal.php">Tipo Animales</a>
           <a class="dropdown-item" href="raza.php">Razas</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="tipoproducto.php">Tipo Producto</a>
+          <a class="dropdown-item" href="producto.php">Producto</a>
         </div>
       </li>
     
