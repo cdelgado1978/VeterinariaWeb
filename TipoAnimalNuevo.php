@@ -1,11 +1,9 @@
 <?php
 require('connection.php');
 
-if (isset($_GET['Id'])) {
-  $id = $_GET['Id'];
-}
+$name = isset($_POST['Nombre']) ? $_POST['Nombre'] : false;
 
-$qry = "select * from Tipos_Animal where Id = '$id'";
+$qry = "insert into Tipos_Animal (nombre) values ('$name')";
 
 $executeQry = sqlsrv_query($conn, $qry);
 

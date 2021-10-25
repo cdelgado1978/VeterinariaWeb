@@ -25,6 +25,9 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="tipoproducto.php">Tipo Producto</a>
           <a class="dropdown-item" href="producto.php">Producto</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="proveedor.php">Proveedor</a>
+          
         </div>
       </li>
     
