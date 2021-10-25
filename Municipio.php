@@ -1,7 +1,10 @@
 <?php
 require('connection.php');
-$qryProvincias = "select * from municipio";
-$executeQry = sqlsrv_query($conn, $qryProvincias);
+$qryMunicipios = "select * from municipio";
+$qryProv = "select * from provincia";
+
+$executeQry = sqlsrv_query($conn, $qryMunicipios);
+$executeQryProv = sqlsrv_query($conn, $qryProv);
 
 ?>
 
@@ -26,17 +29,25 @@ $executeQry = sqlsrv_query($conn, $qryProvincias);
 
         <div class="row col-md-6 mb-4">
 
-            <button type='submit' class='btn btn-primary'>Agregar Municipio</button>
+            <!-- <button type='submit' class='btn btn-primary'>Agregar Municipio</button> -->
 
-            <!-- <form method="POST" action="provinciaUpdate.php">
+             <form method="POST" action="municipioUpdate.php">
                 <?php
                 echo  "<div class='form-group'>
                             <label>Municipio</label>
                             <input class='form-control' id='Nombre' name='Nombre' placeholder='Nombre'>
                         </div>
+                        <div class='form-group'>
+                        <label>Provincia</label>
+                        <select class='form-control' id='provincia' name='ProvinciaId'>";
+                        while ($provincia = sqlsrv_fetch_array($executeQryProv)) {
+                        echo "<option value='".$registro["provinciaId"]."'>".$provincia['Nombre']."</option>";
+                        }
+                        echo "</select>
+                    </div>
                         <button type='submit' class='btn btn-primary'>Guardar</button>"
                 ?>
-            </form> -->
+            </form> 
         </div>
 
         <div class="col-md-6">
@@ -56,7 +67,7 @@ $executeQry = sqlsrv_query($conn, $qryProvincias);
                 echo "<tr>";
                 echo "<td>" . $provincia['Id'] . "</td>";
                 echo "<td>" . $provincia['Nombre'] . "</td>";
-                echo "<td><a href='provinciaEditar.php?Id=$id'>Editar</a></td>
+                echo "<td><a href='municipioEditar.php?Id=$id'>Editar</a></td>
             </tr>";
             };
 

@@ -1,10 +1,10 @@
 <?php 
     // echo $_SERVER['SERVER_NAME'];
     // echo $_SERVER['PHP_SELF'];
-    // $dir = dirname(__FILE__);
+     //$dir = dirname(__FILE__);
 
-    $root = '/Users/uuser/Documents/GitHub/VeterinariaWeb';
-
+    // $root = '/Users/uuser/Documents/GitHub/VeterinariaWeb';
+    $root = '/Fuentes/UAPA/Programacion Web/VeterinariaWeb';
 ?>
 
 <!DOCTYPE html>
