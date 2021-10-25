@@ -104,7 +104,7 @@ if (isset($_GET['id'])) {
                             echo "<td>" . $municipio['Id'] . "</td>";
                             echo "<td>" . $municipio['Nombre'] . "</td>";
                             echo "<td>" . $municipio['provincia'] . "</td>";
-                            echo "<td><a href='municipioEditar.php?Id=$id'>Editar</a></td>";
+                            echo "<td><a href='municipio.php?Id=$id'>Editar</a></td>";
                             echo "</tr>";
                         };
 
