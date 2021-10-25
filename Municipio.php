@@ -16,8 +16,8 @@ $executeQryProv = sqlsrv_query($conn, $qryProv);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Municipio</title>
-    <link href="/style/bootstrap.min.css" rel="stylesheet" />
-    <link href="/style/main.css" rel="stylesheet" />
+    <link href="style/bootstrap.min.css" rel="stylesheet" />
+    <link href="style/main.css" rel="stylesheet" />
 
 </head>
 
@@ -80,8 +80,8 @@ $executeQryProv = sqlsrv_query($conn, $qryProv);
         <?php include $root . '/includes/footer.php'; ?>
     </footer>
 
-    <script src="/js/jquery-3.6.0.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>

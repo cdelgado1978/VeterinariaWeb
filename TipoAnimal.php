@@ -13,8 +13,8 @@ $executeQry = sqlsrv_query($conn, $qryTipoAnimal);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tipo Animal</title>
-    <link href="/style/bootstrap.min.css" rel="stylesheet" />
-    <link href="/style/main.css" rel="stylesheet" />
+    <link href="style/bootstrap.min.css" rel="stylesheet" />
+    <link href="style/main.css" rel="stylesheet" />
 
 </head>
 
@@ -68,8 +68,8 @@ $executeQry = sqlsrv_query($conn, $qryTipoAnimal);
         <?php include $root . '/includes/footer.php'; ?>
     </footer>
 
-    <script src="/js/jquery-3.6.0.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>

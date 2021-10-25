@@ -17,11 +17,11 @@
           Administración
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/Provincia.php">Provincias</a>
-          <a class="dropdown-item" href="/Municipio.php">Municipios</a>
+          <a class="dropdown-item" href="Provincia.php">Provincias</a>
+          <a class="dropdown-item" href="Municipio.php">Municipios</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="/TipoAnimal.php">Tipo Animales</a>
-          <a class="dropdown-item" href="/raza.php">Razas</a>
+          <a class="dropdown-item" href="TipoAnimal.php">Tipo Animales</a>
+          <a class="dropdown-item" href="raza.php">Razas</a>
         </div>
       </li>
     

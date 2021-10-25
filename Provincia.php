@@ -13,8 +13,8 @@ $executeQry = sqlsrv_query($conn, $qryProvincias);
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Provincias</title>
-  <link href="/style/bootstrap.min.css" rel="stylesheet" />
-  <link href="/style/main.css" rel="stylesheet" />
+  <link href="style/bootstrap.min.css" rel="stylesheet" />
+  <link href="style/main.css" rel="stylesheet" />
   <link rel="stylesheet" href="style/datatables-bs4/css/dataTables.bootstrap4.min.css">
 </head>
 
@@ -76,10 +76,10 @@ $executeQry = sqlsrv_query($conn, $qryProvincias);
     <?php include $root . '/includes/footer.php'; ?>
   </footer> -->
 
-  <script src="/js/jquery-3.6.0.min.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
-  <script src="/js/datatables/jquery.dataTables.min.js"></script>
-  <script src="/js/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/datatables/jquery.dataTables.min.js"></script>
+  <script src="js/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 
   <script>
     $(function() {
