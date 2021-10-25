@@ -36,6 +36,8 @@ if (isset($_GET['Id'])) {
         <?php include $root . '/includes/navbar.php'; ?>
     </nav>
     <div class="container">
+    <h2>Municipios</h2>
+    <hr>
          <div class="row">
             <div class="col-md-12 mb-4">
             <?php 
