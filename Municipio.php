@@ -10,7 +10,7 @@ $executeQryProv = sqlsrv_query($conn, $qryProv);
 $id = 0;
 if (isset($_GET['Id'])) {
   $id = $_GET['Id'];
-  $qryMunicipio = "select * from municipio where id=$id";
+  $qryMunicipio = "select mun.*, pro.nombre provincia from municipio mun inner join provincia pro on mun.provinciaId = pro.Id where mun.id=$id";
   $executeQryMun = sqlsrv_query($conn, $qryMunicipio);
   $municipo = sqlsrv_fetch_array($executeQryMun);
 
@@ -42,7 +42,7 @@ if (isset($_GET['Id'])) {
         
             if($id>=1){
 
-                echo "<form action='municipoUpdate.php' method='post'>";
+                echo "<form action='municipioUpdate.php' method='post'>";
             echo "    <input type='hidden' name='Id' value='$municipo[Id]'/>";
             echo "    <div class='form-group col-md-6'>";
             echo "        <label>Nombre</label>";
