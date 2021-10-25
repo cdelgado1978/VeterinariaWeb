@@ -44,51 +44,53 @@ $executeQry = sqlsrv_query($conn, $qryProvincias);
       </div>
 
     </div>
-<div class="row">
-    <div class="col-md-12">
-      <?php
+    <div class="row">
+      <div class="col-md-12">
 
-      echo "<table class='table datatable table-bordered table-striped'>
-            <thead>
-                <th class='col-md-1'>Id</th>
-                <th class='col-md-4'>Nombre</th>
-                <th class='col-md-4'>Accion</th>
-            </thead>
-            <tbody>";
+        <table class='table datatable table-bordered table-striped'>
+          <thead>
+            <th class='col-md-1'>Id</th>
+            <th class='col-md-4'>Nombre</th>
+            <th class='col-md-4'>Accion</th>
+          </thead>
+          <tbody>
+            <?php
 
-      // foreach ($provincias as $provincia) {
-      while ($provincia = sqlsrv_fetch_array($executeQry)) {
-        $id = $provincia['Id'];
-        echo "<tr>";
-        echo "<td>" . $provincia['Id'] . "</td>";
-        echo "<td>" . $provincia['Nombre'] . "</td>";
-        echo "<td><a href='provincia.php?Id=$id'>Editar</a></td>
+            while ($provincia = sqlsrv_fetch_array($executeQry)) {
+              $id = $provincia['Id'];
+              echo "<tr>";
+              echo "<td>" . $provincia['Id'] . "</td>";
+              echo "<td>" . $provincia['Nombre'] . "</td>";
+              echo "<td><a href='provinciaEditar.php?Id=$id'>Editar</a></td>
             </tr>";
-      };
+            };
 
-      ?>
-
-    </div>
+            ?>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 
-  <footer>
+  <!-- <footer>
     <?php include $root . '/includes/footer.php'; ?>
-  </footer>
+  </footer> -->
 
   <script src="/js/jquery-3.6.0.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   <script src="/js/datatables/jquery.dataTables.min.js"></script>
-<script src="/js/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="/js/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 
-<script>
-	$(function () {
-	  $(".datatable").DataTable({
-		"responsive": true, "lengthChange": false, "autoWidth": false,
-	  });
+  <script>
+    $(function() {
+      $(".datatable").DataTable({
+        "responsive": true,
+        "lengthChange": false,
+        "autoWidth": false,
+      });
 
-	});
-</script>
+    });
+  </script>
 </body>
 
 </html>
